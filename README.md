@@ -28,15 +28,20 @@ Never commit real credentials or use the example password in production.
 - POST /api/inquiries
 - GET /api/services
 - GET /api/projects
+- GET /api/blog, /api/team, /api/testimonials and /api/faqs (published public content)
 - POST /api/auth/login
 - GET /api/admin/overview (protected)
 - GET /api/admin/inquiries (protected)
+- GET /api/admin/content/:kind (protected)
+- POST /api/admin/content/:kind (protected)
+- PATCH /api/admin/content/:kind/:id (protected)
+- DELETE /api/admin/content/:kind/:id (protected)
 - PATCH /api/admin/inquiries/:id/status (protected)
 
 ## Implemented in this initial foundation
-Responsive bilingual public website, About / Services / Portfolio routes, public inquiry submission, MongoDB models, administrator login, protected overview metrics and inquiry management endpoints.
+Responsive bilingual public website, API-backed public service/project/article listings, public inquiry submission, MongoDB models, administrator login, protected dashboard metrics, CMS create/read/update/delete for Projects, Services, Blog, Team, Testimonials and FAQs, and inquiry review/status management.
 
 ## Not yet implemented
-The complete CMS CRUD suite, private media storage, client portal, CRM pipeline, proposals, appointment booking, notifications, advanced analytics, automated tests and production deployment. The Master Prompts 01–07 remain the extended product specification. Do not treat placeholder content or the initial admin view as a complete production CMS.
+Private media storage and upload scanning, client portal, full CRM pipeline, proposals, appointment booking, email/notification automation, advanced analytics, complete role/permission editor, activity logs, automated application tests and production deployment. The Master Prompts 01–07 remain the extended product specification. Do not treat placeholder content or the initial admin view as a complete production CMS.
 
 Before launch, configure secure production secrets, database backups, monitoring, private file storage, access controls, tests, domain and HTTPS. Verify all business contact details and replace all demo/placeholder portfolio content with approved factual content.
